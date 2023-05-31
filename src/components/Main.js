@@ -4,13 +4,7 @@ import RestCard from "./Cards/RestCard";
 import { allRestaurants } from "../config";
 import Carousel from "./Carousel";
 import Shimmer from "./Shimmer";
-
-function filterRestData(restaurantList, searchText) {
-  const filteredData = restaurantList.filter((rest) =>
-    rest.data.name.toLowerCase().includes(searchText.toLowerCase())
-  );
-  return filteredData;
-}
+import { filterRestData } from "../utils/helper";
 
 const Main = () => {
   const [searchText, setSearchText] = useState("");
